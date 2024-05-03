@@ -7,14 +7,18 @@ import joblib
 import pickle
 from flask import Flask, render_template, request
 
-
+#create a Flask instance
 app = Flask(__name__)
 
+#Read the dataset
 df=pd.read_csv('dataset/CabFirmCaseStudyMerged.csv')
+
+#To display the list of Cities,Company,Gender in the dropdown
 unique_cities = df['City'].unique().tolist()
 unique_companies = df['Company'].unique().tolist()
 unique_genders = df['Gender'].unique().tolist()
 
+# Encoding categorical variables
 le_city = LabelEncoder()
 le_company = LabelEncoder()
 le_gender = LabelEncoder()
@@ -23,31 +27,27 @@ df['City_encoded'] = le_city.fit_transform(df['City'])
 df['Company_encoded'] = le_company.fit_transform(df['Company'])
 df['Gender_encoded'] = le_gender.fit_transform(df['Gender'])
 
-
+#Feature selection (dependent and independent variables)
 x = df[['KM_Travelled', 'City_encoded', 'Company_encoded', 'Gender_encoded']]
 y = df['Price_Charged']
 
-
+#Split the data into train and test
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
-# Random Forest Regressor
-rf_regressor = RandomForestRegressor(n_estimators=100, random_state=42)  # You can adjust the number of estimators as needed
+# Training the dataset using Random Forest Regressor
+rf_regressor = RandomForestRegressor(n_estimators=100, random_state=42) 
 rf_regressor.fit(x_train, y_train)
-
-
 
 # Save the trained model as a pickle file
 pickle.dump(rf_regressor,open('model.pkl','wb'))
 model=pickle.load(open('model.pkl','rb'))
-#joblib.dump(rf_regressor, '/content/drive/My Drive/OUTPUT_CSV/random_forest_regressor_model.pkl')
-
 
 # Define route for home page
 @app.route('/')
 def home():
     return render_template('index.html', unique_cities=unique_cities, unique_companies=unique_companies, unique_genders=unique_genders,
                            error="Please enter a value for Km to Travel.")
-
+# Define route for predict page
 @app.route('/predict', methods=['POST'])
 def predict():
     # Get input values from the form
