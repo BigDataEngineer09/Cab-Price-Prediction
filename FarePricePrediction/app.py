@@ -5,6 +5,7 @@ import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 import pickle
+import gzip
 from flask import Flask, render_template, request
 
 #create a Flask instance
@@ -39,8 +40,9 @@ rf_regressor = RandomForestRegressor(n_estimators=100, random_state=42)
 rf_regressor.fit(x_train, y_train)
 
 # Save the trained model as a pickle file
-pickle.dump(rf_regressor,open('model.pkl','wb'))
-model=pickle.load(open('model.pkl','rb'))
+pickle.dump(rf_regressor,open('models/model.pkl','wb'))
+# Load the trained model as a pickle file
+model=pickle.load(open('models/model.pkl','rb'))
 
 # Define route for home page
 @app.route('/')
