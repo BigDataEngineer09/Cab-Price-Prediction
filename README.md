@@ -41,7 +41,7 @@ This will start the Flask server **locally**.
 
 Follow the given steps to deploy the Cab Price Prediction Flask Web App on **Microsoft Azure** cloud using the below guide.
 
-[PDF file](https://github.com/BigDataEngineer09/Cab-Price-Prediction/blob/main/Docker_Deployment_Azure_Procedure.pdf)
+[Guide on deploying the webapp in Azure using Docker](https://github.com/BigDataEngineer09/Cab-Price-Prediction/blob/main/Docker_Deployment_Azure_Procedure.pdf)
 
 ---
 # **Contributing:**
