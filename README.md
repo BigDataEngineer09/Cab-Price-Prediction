@@ -1,4 +1,4 @@
-##Cab Price Prediction Flask Web App
+# Cab Price Prediction Flask Web App
 
 ![HomePage](github_images/HomePage.png)
 
