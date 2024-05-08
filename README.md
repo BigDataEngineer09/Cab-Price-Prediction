@@ -38,6 +38,7 @@ This will start the Flask server **locally**.
 ![PredictPage](github_images/PredictPage.png)
 
 # **Cloud Deployment Instructions:**
+![Cloud](github_images/hosted_on_azure.png)
 
 Follow the given steps to deploy the Cab Price Prediction Flask Web App on **Microsoft Azure** cloud using the below guide.
 
