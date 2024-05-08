@@ -1,17 +1,56 @@
-# Cab-Price-Prediction
+
+# Cab Price Prediction Flask Web App
+
 ![HomePage](github_images/HomePage.png)
 
-**Objective:**
+Welcome to the Cab Price Prediction Flask Web App repository! This repository contains code for a web application built with Flask that predicts the price of a cab ride based on certain features. You can use this README file as a guide to fork and deploy the web app for your own use.
 
-The objective of this implementation is to create a Flask web application for predicting taxi fare prices based on input parameters such as city, cab company, gender, and distance traveled. The application allows users to select these parameters using dropdown menus and input fields. Upon submission, the application predicts the fare price using a trained Random Forest Regressor model.
+---
+# **Usage Instructions:**
 
-**Key Objectives:**
+Follow these steps to deploy the Cab Price Prediction Flask Web App
 
-1. Develop a user-friendly web interface where users can input parameters for predicting taxi fare prices.
-2. Utilize client-side validation to ensure that users provide all required input parameters.
-3. Implement server-side validation to handle edge cases, such as missing input or incorrect data types.
-4. Train a Random Forest Regressor model using  taxi fare data to predict fare prices accurately.
-5. Display the predicted fare price to the user on the same page, along with the input parameters.
-6. Deploy the Flask application locally for testing and further development.
+**1. Clone the Repository:**
+
+     git clone https://github.com/BigDataEngineer09/Cab-Price-Prediction.git
+
+**2. Navigate to the Directory:**
+
+     cd Cab-Price-Prediction
+
+**3. Install Dependencies:**
+
+    pip install -r requirements.txt
+
+**4. Run the Application in CMD or VSC:**
+
+    python app.py
+
+This will start the Flask server **locally**.
+
+**5. Access the Web App:**
+
+     Open your web browser and go to http://127.0.0.1:5000/ to access the Cab Price Prediction web app.
+
+**6. Input Data and Get Predictions:**
+
+    Fill in the required information about the cab ride (e.g., distance, time) and click on the "Predict" button to get the predicted price.
 
 ![PredictPage](github_images/PredictPage.png)
+
+# **Cloud Deployment Instructions:**
+![Cloud](github_images/hosted_on_azure.png)
+
+Follow the given steps to deploy the Cab Price Prediction Flask Web App on **Microsoft Azure** cloud using the below guide.
+
+[Guide on deploying the webapp in Azure using Docker](https://github.com/BigDataEngineer09/Cab-Price-Prediction/blob/main/Docker_Deployment_Azure_Procedure.pdf)
+
+---
+# **Contributing:**
+If you'd like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request. Contributions are welcome!
+
+---
+Feel free to reach out if you have any questions or need further assistance!
+
+Happy coding! 🚕💻
+
