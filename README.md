@@ -11,21 +11,21 @@ Follow these steps to deploy the Cab Price Prediction Flask Web App
 
 **1. Clone the Repository:**
 
-    ``git clone https://github.com/BigDataEngineer09/Cab-Price-Prediction.git``
+     git clone https://github.com/BigDataEngineer09/Cab-Price-Prediction.git
 
 **2. Navigate to the Directory:**
 
-    ``cd Cab-Price-Prediction``
+     cd Cab-Price-Prediction
 
 **3. Install Dependencies:**
 
-    ``pip install -r requirements.txt``
+    pip install -r requirements.txt
 
 **4. Run the Application in CMD or VSC:**
 
-    ``python app.py``
+    python app.py
 
-     This will start the Flask server **locally**.
+This will start the Flask server **locally**.
 
 **5. Access the Web App:**
 
